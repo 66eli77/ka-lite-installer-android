@@ -44,6 +44,18 @@ Command could look like this:
 
     ant -Dandroid-sdk=/path/to/android/sdk -Dandroid-ndk=/path/to/android/ndk -Dandroid-api=14 -Dandroid-ndkver=r8c
 
+Build for Mac
+-------------
+
+Make sure you have the right NDK version, you can get one here for Mac(http://dl.google.com/android/ndk/android-ndk-r8c-darwin-x86.tar.bz2)
+
+For Mac users, you don’t have and need ia32-libs, instead, you need the right version of Cython, Cython 0.17.1
+
+If your Mac run OSX Mavericks, you cannot install Cython normally. Run the following command will fix this
+
+	$ sudo CFLAGS=-Wunused-command-line-argument-hard-error-in-future pip install cython==0.17.1
+	
+then run the _ant_  as above mentioned.
 
 Debug
 -----
