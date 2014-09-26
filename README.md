@@ -31,6 +31,8 @@ You also want to ensure you have ia32-libs installed. If you are running Ubuntu 
 	exit
 	sudo apt-get install gcc-multilib
 
+Here's a link to download the right Linux NDK version(http://dl.google.com/android/ndk/android-ndk-r8c-linux-x86.tar.bz2)
+
 Build
 -----
 To build the apk, run the _ant_ with the folowing properties:
