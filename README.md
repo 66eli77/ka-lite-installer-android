@@ -2,6 +2,8 @@ KA Lite Wrapper for Android
 ===============
 
 Android port of KA Lite (an offline version of Khan Academy), encapsulating the Django project.
+please run $ git clone —recursive https://github.com/learningequality/ka-lite-installer-android.git
+to clone the submodule inside this repo
 
 Version info
 ------------
@@ -35,16 +37,14 @@ Here's a link to download the right Linux NDK version(http://dl.google.com/andro
 
 Build
 -----
-To build the apk, run the _ant_ with the folowing properties:
+To build the apk, first setup the environment with the following command:
 
-* android-sdk - Path to the Android SDK (will ask if not set)
-* android-ndk - Path to the Android NDK (will ask if not set)
-* android-api - Android API version (default is 14)
-* android-ndkver - Android NDK version (default is r8c)
+	export ANDROIDAPI=<Android API version(must be 14 !!)>
+	export ANDROIDNDKVER=<Android NDK version>
+	export ANDROIDSDK=<Path to the Android SDK>
+	export ANDROIDNDK=<Path to the Android NDK(default is r8c)>
 
-Command could look like this:
-
-    ant -Dandroid-sdk=/path/to/android/sdk -Dandroid-ndk=/path/to/android/ndk -Dandroid-api=14 -Dandroid-ndkver=r8c
+Navigate to the ka-lite-installer-android folder, then run the build-script(this is a SHELL script file) file from that folder
 
 Build for Mac
 -------------
@@ -56,7 +56,7 @@ For Mac users, you don’t have and need ia32-libs, instead, you need the right 
 If your Mac run OSX Mavericks, you cannot install Cython normally. Run the following command will fix this
 
 	$ sudo CFLAGS=-Wunused-command-line-argument-hard-error-in-future pip install cython==0.17.1
-	
+
 then run the _ant_  as above mentioned.
 
 Debug

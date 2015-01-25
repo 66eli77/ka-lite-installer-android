@@ -26,8 +26,9 @@ local.properties
 *.sublime-workspace
 
 # submodules
-ka-lite
-python-for-android
+#python-for-android
+
+.DS_Store
 
 log.txt
 
