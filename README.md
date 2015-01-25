@@ -33,18 +33,31 @@ You also want to ensure you have ia32-libs installed. If you are running Ubuntu 
 	exit
 	sudo apt-get install gcc-multilib
 
+Here's a link to download the right Linux NDK version(http://dl.google.com/android/ndk/android-ndk-r8c-linux-x86.tar.bz2)
+
 Build
 -----
 To build the apk, first setup the environment with the following command:
 
-	export ANDROIDAPI=<Android API version(must be 14 !!)> 
-	export ANDROIDNDKVER=<Android NDK version> 
-	export ANDROIDSDK=<Path to the Android SDK> 
-	export ANDROIDNDK=<Path to the Android NDK(default is r8c)> 
+	export ANDROIDAPI=<Android API version(must be 14 !!)>
+	export ANDROIDNDKVER=<Android NDK version>
+	export ANDROIDSDK=<Path to the Android SDK>
+	export ANDROIDNDK=<Path to the Android NDK(default is r8c)>
 
 Navigate to the ka-lite-installer-android folder, then run the build-script(this is a SHELL script file) file from that folder
 
-After the build process finished, you should be able to find the APK inside the python-for-android/dist/default/bin folder.
+Build for Mac
+-------------
+
+Make sure you have the right NDK version, you can get one here for Mac(http://dl.google.com/android/ndk/android-ndk-r8c-darwin-x86.tar.bz2)
+
+For Mac users, you don’t have and need ia32-libs, instead, you need the right version of Cython, Cython 0.17.1
+
+If your Mac run OSX Mavericks, you cannot install Cython normally. Run the following command will fix this
+
+	$ sudo CFLAGS=-Wunused-command-line-argument-hard-error-in-future pip install cython==0.17.1
+
+then run the _ant_  as above mentioned.
 
 Debug
 -----
